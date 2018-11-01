@@ -48,6 +48,8 @@ contract HashStore {
     /*
     * Constructor
     */
+    // Krishna: commented out the ctor since contract was not compiling
+    /*
     constructor() public {
         // assign owner
         owner = msg.sender;
@@ -56,7 +58,7 @@ contract HashStore {
         //Set lastHashId
         lastHashId = 0;
     }
-
+    */
 
     /**
     * @dev save new hash
@@ -71,7 +73,8 @@ contract HashStore {
         hashes[_nodeAddress].timestamp = block.timestamp;
 
         // Log event
-        emit NewHashStored(hashes[_nodeAddress].CAAddr, hashId, hashes[_nodeAddress].certificateHash, hashes[_nodeAddress].timestamp);
+        // Krishna: commented since contract was not compiling
+        // emit NewHashStored(hashes[_nodeAddress].CAAddr, hashId, hashes[_nodeAddress].certificateHash, hashes[_nodeAddress].timestamp);
     }
 
     /**
